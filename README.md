@@ -1,5 +1,7 @@
 <div align="center">
 
+<br>
+
 # 📅 ABSENCEPAT
 # Sistem Absensi Mahasiswa Berbasis CLI dengan Fitur Riwayat Undo
 
@@ -100,8 +102,6 @@ ABSENCEPAT dikembangkan secara kolaboratif oleh Kelompok 8, mahasiswa Informatik
 
 
 ---
-
-<br>
 
 ## 📄 Lisensi
 
