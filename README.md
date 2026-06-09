@@ -1,13 +1,7 @@
 <div align="center">
 
-📅 ABSENCEPAT
+# 📅 ABSENCEPAT
 # Sistem Absensi Mahasiswa Berbasis CLI dengan Fitur Riwayat Undo
-
-<br>
-
-![C](https://img.shields.io/badge/Language-C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![License](https://img.shields.io/badge/License-Academic-orange?style=for-the-badge)
-
 
 <br>
 
@@ -104,12 +98,8 @@ ABSENCEPAT dikembangkan secara kolaboratif oleh Kelompok 8, mahasiswa Informatik
 | M. Farras Munawwir | Implementasi *Bubble Sort*, *File I/O* (*simpanKeFile* dan *bacaDariFile*), dan persiapan fungsi `main` (Line 154 - 232) |
 | Nabil Al Fijar | Implementasi logika *switch-case* pada menu utama, pengelolaan fitur *undo* di `main`, proses *sorting* interaktif, fitur kembalikan urutan asli, *exit* program (Line 234 - Akhir), dan penyusunan dokumentasi README |
 
-</div>
 
-<br>
-
-<div align="center">
-</div>
+---
 
 <br>
 
