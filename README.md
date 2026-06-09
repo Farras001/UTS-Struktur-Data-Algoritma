@@ -1,35 +1,72 @@
-# ABSENCEPAT: Sistem Absensi Mahasiswa Berbasis CLI
+<div align="center">
 
-[cite_start]ABSENCEPAT adalah sebuah purwarupa sistem pencatatan kehadiran mahasiswa berbasis *Command Line Interface* (CLI) yang ditulis dalam bahasa C[cite: 37, 39]. [cite_start]Sistem ini dirancang untuk mendigitalisasi proses absensi secara efisien, aman, dan meminimalisir risiko kelalaian manusia (*human error*)[cite: 21, 82]. 
+# 📅 ABSENCEPAT
+### Sistem Absensi Mahasiswa Berbasis CLI dengan Fitur Riwayat Undo
 
-[cite_start]Proyek ini dibangun sebagai bagian dari Praktikum Struktur Data dan Algoritma, Program Studi Informatika, Fakultas Matematika dan Ilmu Pengetahuan Alam, Universitas Syiah Kuala[cite: 10, 11, 12, 13].
+<br>
+
+![C](https://img.shields.io/badge/Language-C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Project_Praktikum-success?style=for-the-badge)
+![License](https://img.shields.io/badge/License-Academic-orange?style=for-the-badge)
+![Universitas](https://img.shields.io/badge/Universitas-Syiah%20Kuala-blueviolet?style=for-the-badge)
+
+<br>
+
+> **ABSENCEPAT** adalah program berbasis CLI yang mendigitalisasi proses pencatatan kehadiran mahasiswa menggunakan bahasa pemrograman C. Program ini dirancang untuk menyelesaikan masalah pencatatan absensi manual yang kaku, lambat direkapitulasi, dan rentan terhadap *human error* (seperti salah input status kehadiran). Pendekatan sistem ini cukup menarik secara teknis karena memadukan `Singly Linked List` untuk penyimpanan riwayat secara dinamis, `Stack` untuk mengeksekusi fitur *Undo* secara instan, serta meminjam struktur `Array` temporer untuk melakukan *sorting* tanpa merusak urutan asli pointer pada memori.
+<br>
+
+</div>
+
+---
 
 ## ✨ Fitur Utama
 
-Sistem ini menawarkan serangkaian fitur untuk mempermudah administrasi kelas:
-* [cite_start]**Tambah Data Absensi:** Mencatat kehadiran mahasiswa (NPM, Nama, Jurusan, Semester, Tanggal) secara dinamis tanpa batasan kapasitas kaku[cite: 26, 98].
-* [cite_start]**Tampilkan Semua Data:** Menyajikan riwayat kehadiran dalam format tabel yang terstruktur dan rapi[cite: 98].
-* [cite_start]**Fitur Undo (Pembatalan Instan):** Mencegah kesalahan input dengan membatalkan data absen yang paling terakhir dimasukkan hanya dalam hitungan detik[cite: 27, 82, 98].
-* [cite_start]**Pengurutan Berdasarkan Tanggal:** Mengurutkan riwayat absensi dari tanggal terlama ke terbaru[cite: 98].
-* [cite_start]**Pengurutan Berdasarkan Nama:** Mengurutkan daftar mahasiswa secara alfabetis (A-Z) untuk mempermudah rekapitulasi[cite: 70, 98].
-* [cite_start]**Persistensi Data (File I/O):** Seluruh data otomatis disimpan dan dibaca kembali dari file `absensi.txt`, sehingga riwayat tidak hilang setelah program ditutup[cite: 42, 98].
+| # | Fitur | Deskripsi |
+|:---:|---|---|
+| 1 | ➕ **Tambah Data Dinamis** | Mencatat kehadiran mahasiswa tanpa batasan kapasitas kaku berbasis Linked List |
+| 2 | ⏪ **Undo Pembatalan Instan** | Mencegah kesalahan input (*human error*) dengan membatalkan aksi terakhir |
+| 3 | 📅 **Smart Sorting Tanggal** | Urutkan riwayat absensi dari tanggal terlama ke terbaru |
+| 4 | 🔤 **Smart Sorting Nama** | Urutkan rekapitulasi daftar mahasiswa secara alfabetis (A-Z) |
+| 5 | 💾 **Persistensi Data** | Simpan dan baca riwayat secara otomatis ke *file* `absensi.txt` |
 
-## 🛠️ Arsitektur Struktur Data & Algoritma
+---
 
-Sistem ini dioptimalkan dengan mengintegrasikan beberapa struktur data dan algoritma pokok:
+## 🛠 Arsitektur Sistem
 
-* [cite_start]**Singly Linked List:** Berfungsi sebagai penyimpanan utama yang dinamis untuk riwayat absensi harian yang terus bertambah[cite: 26, 55].
-* [cite_start]**Stack:** Menjadi mesin penggerak fitur *Undo* dengan prinsip LIFO (*Last In, First Out*)[cite: 57, 59].
-* [cite_start]**Array (Temporary Buffer):** Digunakan sebagai wadah sementara untuk memproses algoritma pengurutan data agar lebih efisien dengan akses indeks `O(1)`, tanpa merombak *pointer* asli pada Linked List[cite: 28, 50, 258].
-* [cite_start]**Insertion Sort:** Diterapkan untuk menyisipkan dan mengurutkan data berdasarkan parameter waktu/tanggal[cite: 67, 74].
-* [cite_start]**Bubble Sort:** Diterapkan untuk mengurutkan laporan rekapitulasi berdasarkan nama mahasiswa secara alfabetis[cite: 70, 74].
-* [cite_start]**Traversal:** Menelusuri seluruh simpul (*node*) untuk menampilkan tabel absen dan menyimpannya ke *file* teks[cite: 73].
+### 🌳 Struktur Data
 
-## 🚀 Cara Instalasi & Menjalankan Program
+| Struktur Data | Digunakan Untuk |
+|---|---|
+| **Singly Linked List** | Menyimpan riwayat absensi mahasiswa secara dinamis tanpa batasan kapasitas memori kaku. |
+| **Stack** | Mengelola riwayat *input* terakhir untuk fitur *Undo* (LIFO) pembatalan data. |
+| **Array** | Wadah sementara (*buffer*) untuk menyalin dan mengeksekusi algoritma *sorting*. |
 
-Pastikan kamu memiliki *compiler* C seperti `gcc` terinstal di komputermu.
+### ⚙️ Algoritma
 
-1. **Clone repositori ini:**
-   ```bash
-   git clone [https://github.com/username/absencepat.git](https://github.com/username/absencepat.git)
-   cd absencepat
+| Algoritma | Kompleksitas | Digunakan Untuk |
+|---|---|---|
+| **Insertion Sort** | O(n^2) | Mengurutkan data absensi secara *real-time* berdasarkan tanggal/waktu masuk. |
+| **Bubble Sort** | O(n^2) | Mengurutkan laporan akhir absensi secara alfabetis (A-Z) berdasarkan nama. |
+| **Traversal** | O(n) | Menelusuri *linked list* untuk menampilkan tabel data dan proses simpan/baca *file* teks. |
+
+---
+
+## 💻 Cara Menjalankan
+
+### Prasyarat
+
+Pastikan *compiler* GCC telah terinstal: Windows (MinGW-w64), Linux (`build-essential`), atau macOS (`xcode-select --install`).
+
+### Langkah Instalasi & Kompilasi
+
+```bash
+# 1. Clone repositori (opsional jika menggunakan git)
+git clone [https://github.com/username/absencepat.git](https://github.com/username/absencepat.git)
+cd absencepat
+
+# 2. Kompilasi program
+gcc a.c -o absensi
+
+# 3. Jalankan program
+./absensi      # Untuk Linux / macOS
+.\absensi.exe  # Untuk Windows
