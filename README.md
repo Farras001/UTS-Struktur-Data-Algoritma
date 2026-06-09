@@ -1,14 +1,13 @@
 <div align="center">
 
-# 📅 ABSENCEPAT
-### Sistem Absensi Mahasiswa Berbasis CLI dengan Fitur Riwayat Undo
+📅 ABSENCEPAT
+# Sistem Absensi Mahasiswa Berbasis CLI dengan Fitur Riwayat Undo
 
 <br>
 
 ![C](https://img.shields.io/badge/Language-C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Project_Praktikum-success?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-Academic-orange?style=for-the-badge)
-![Universitas](https://img.shields.io/badge/Universitas-Syiah%20Kuala-blueviolet?style=for-the-badge)
+
 
 <br>
 
@@ -110,9 +109,6 @@ ABSENCEPAT dikembangkan secara kolaboratif oleh Kelompok 8, mahasiswa Informatik
 <br>
 
 <div align="center">
-
-*Dibuat dengan ❤️ oleh Kelompok 8 — Informatika, Universitas Syiah Kuala*
-
 </div>
 
 <br>
