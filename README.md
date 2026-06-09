@@ -5,6 +5,13 @@
 
 <br>
 
+![C](https://img.shields.io/badge/Language-C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Project_Praktikum-success?style=for-the-badge)
+![License](https://img.shields.io/badge/License-Academic-orange?style=for-the-badge)
+![Universitas](https://img.shields.io/badge/Universitas-Syiah%20Kuala-blueviolet?style=for-the-badge)
+
+<br>
+
 > **ABSENCEPAT** adalah program berbasis CLI yang mendigitalisasi proses pencatatan kehadiran mahasiswa menggunakan bahasa pemrograman C. Program ini dirancang untuk menyelesaikan masalah pencatatan absensi manual yang kaku, lambat direkapitulasi, dan rentan terhadap *human error* (seperti salah input status kehadiran). Pendekatan sistem ini cukup menarik secara teknis karena memadukan `Singly Linked List` untuk penyimpanan riwayat secara dinamis, `Stack` untuk mengeksekusi fitur *Undo* secara instan, serta meminjam struktur `Array` temporer untuk melakukan *sorting* tanpa merusak urutan asli pointer pada memori.
 <br>
 
@@ -60,7 +67,19 @@ cd absencepat
 # 2. Kompilasi program
 gcc a.c -o absensi
 
-🖥️ Tampilan ProgramMenu UtamaPlaintext===== SISTEM ABSENSI =====
+# 3. Jalankan program
+./absensi      # Untuk Linux / macOS
+.\absensi.exe  # Untuk Windows
+```
+
+---
+
+## 🖥️ Tampilan Program
+
+### Menu Utama
+
+```text
+===== SISTEM ABSENSI =====
 1. Tambah Absensi
 2. Tampilkan Semua Data
 3. Undo
@@ -69,7 +88,35 @@ gcc a.c -o absensi
 6. Tampilkan Urutan Asli
 0. Keluar & Simpan
 Pilih menu: _
-👥 Tim PengembangABSENCEPAT dikembangkan secara kolaboratif oleh Kelompok 8, mahasiswa Informatika, Fakultas Matematika dan Ilmu Pengetahuan Alam, Universitas Syiah Kuala.NamaKontribusi UtamaM. Isyraq AkraminImplementasi struct, inisialisasi Stack untuk undo, pembuatan node, penambahan data (tambahBelakang), dan penghapusan data (Line 1 - 83)Farras Arthada SiregarImplementasi traversal untuk tabel tampilan, pembersihan memori (freeLinkedList), konversi Linked List ke Array dan sebaliknya, serta Insertion Sort (Line 85 - 152)M. Farras MunawwirImplementasi Bubble Sort, File I/O (simpanKeFile dan bacaDariFile), dan persiapan fungsi main (Line 154 - 232)Nabil Al FijarImplementasi logika switch-case pada menu utama, pengelolaan fitur undo di main, proses sorting interaktif, fitur kembalikan urutan asli, exit program (Line 234 - Akhir), dan penyusunan dokumentasi READMEDibuat dengan ❤️ oleh Kelompok 8 — Informatika, Universitas Syiah Kuala📄 LisensiProyek ini dibuat untuk keperluan akademik dalam rangka Praktikum Struktur Data dan Algoritma, Universitas Syiah Kuala. Bebas digunakan sebagai referensi pembelajaran dengan menyebutkan sumber.
-# 3. Jalankan program
-./absensi      # Untuk Linux / macOS
-.\absensi.exe  # Untuk Windows
+```
+
+---
+
+## 👥 Tim Pengembang
+
+ABSENCEPAT dikembangkan secara kolaboratif oleh Kelompok 8, mahasiswa Informatika, Fakultas Matematika dan Ilmu Pengetahuan Alam, Universitas Syiah Kuala.
+
+<div align="center">
+
+| Nama | Kontribusi Utama |
+|---|---|
+| M. Isyraq Akramin | Implementasi `struct`, inisialisasi `Stack` untuk *undo*, pembuatan *node*, penambahan data (*tambahBelakang*), dan penghapusan data (Line 1 - 83) |
+| Farras Arthada Siregar | Implementasi traversal untuk tabel tampilan, pembersihan memori (*freeLinkedList*), konversi *Linked List* ke *Array* dan sebaliknya, serta *Insertion Sort* (Line 85 - 152) |
+| M. Farras Munawwir | Implementasi *Bubble Sort*, *File I/O* (*simpanKeFile* dan *bacaDariFile*), dan persiapan fungsi `main` (Line 154 - 232) |
+| Nabil Al Fijar | Implementasi logika *switch-case* pada menu utama, pengelolaan fitur *undo* di `main`, proses *sorting* interaktif, fitur kembalikan urutan asli, *exit* program (Line 234 - Akhir), dan penyusunan dokumentasi README |
+
+</div>
+
+<br>
+
+<div align="center">
+
+*Dibuat dengan ❤️ oleh Kelompok 8 — Informatika, Universitas Syiah Kuala*
+
+</div>
+
+<br>
+
+## 📄 Lisensi
+
+Proyek ini dibuat untuk keperluan akademik dalam rangka Praktikum Struktur Data dan Algoritma, Universitas Syiah Kuala. Bebas digunakan sebagai referensi pembelajaran dengan menyebutkan sumber.
